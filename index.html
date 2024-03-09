@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple TodoList</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
@@ -30,6 +31,11 @@
             inputEle.value = "";
             console.log(pElem);
 
+        })
+
+        todoListEle.addEventListener("click",(event) => {
+            let currentEle = event.target;
+            currentEle.remove();
         })
     </script>
 </body>
