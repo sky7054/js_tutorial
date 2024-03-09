@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple TodoList</title>
+</head>
+<body>
+    <div>
+        <h1>Simple todoList Application</h1>
+        <input type="text" id="inputField">
+        <button class="btn">click me</button>
+        <div class="todoListEle">
+            <!-- <p id="firstTodo"></p> -->
+        </div>
+    </div>
+    <script>
+        let inputEle = document.getElementById("inputField");
+        // console.log(inputEle);
+        let clickBtn = document.querySelector(".btn");
+        // console.log(clickBtn)
+        // let firstTodoEle = document.getElementById("firstTodo");
+        let todoListEle = document.querySelector(".todoListEle");
+
+        clickBtn.addEventListener("click",()=>{
+            console.log(inputEle.value);
+            let pElem = document.createElement("p");
+            pElem.textContent = inputEle.value;
+            todoListEle.append(pElem);
+            inputEle.value = "";
+            console.log(pElem);
+
+        })
+    </script>
+</body>
+</html>
